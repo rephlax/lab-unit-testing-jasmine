@@ -5,3 +5,13 @@ function add (numOne, numTwo) {
 
     return Number(numOne) + Number(numTwo);
 }
+
+function findUnique(wordsArr) {
+    const wordCount = {};
+  
+    for (const word of wordsArr) {
+      wordCount[word] = (wordCount[word] || 0) + 1;
+    }
+  
+    return wordsArr.find(word => wordCount[word] === 1);
+  }
